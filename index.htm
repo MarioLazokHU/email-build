@@ -14,11 +14,22 @@
     />
   </head>
   <body>
+    <div class="email-hidden" id="email-modal">
+      <div class="modal">
+        <div class="email">
+          <span>Email elküldése</span>
+          <button class="nav-close" id="close-modal">X</button>
+        </div>
+        <input type="text" placeholder="E-mail..." />
+        <button class="nav-btn">Elküldés</button>
+      </div>
+    </div>
     <header>
       <nav>
         <button class="nav-btn">Mentés</button>
         <button class="nav-btn">Betöltés</button>
         <button class="nav-btn">Elküldés</button>
+        <button class="nav-btn" id="email-btn">Elküldés Emailben</button>
         <button class="nav-close">X</button>
       </nav>
     </header>
@@ -34,42 +45,47 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="content-footer">
-          <div class="navigation-btn">
-            <div class="navi-btn">
-              <img src="./icons/gears-solid.svg" alt="" srcset="" />
+          <div class="content-footer">
+            <div class="navigation-btn">
+              <div class="navi-btn">
+                <img src="./icons/gears-solid.svg" alt="" srcset="" />
+              </div>
+              <div class="navi-btn">
+                <img
+                  src="./icons/arrow-rotate-left-solid.svg"
+                  alt=""
+                  srcset=""
+                />
+                <img src="./icons/rotate-right-solid.svg" alt="" srcset="" />
+              </div>
+              <div class="navi-btn-last">
+                <img src="./icons/desktop-solid.svg" alt="" srcset="" />
+                <img
+                  src="./icons/mobile-screen-button-solid.svg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
             </div>
-            <div class="navi-btn">
-              <img src="./icons/arrow-rotate-left-solid.svg" alt="" srcset="" />
-              <img src="./icons/rotate-right-solid.svg" alt="" srcset="" />
-            </div>
-            <div class="navi-btn-last">
-              <img src="./icons/desktop-solid.svg" alt="" srcset="" /><img
-                src="./icons/mobile-screen-button-solid.svg"
-                alt=""
-                srcset=""
-              />
-            </div>
-          </div>
-          <button class="plus-btn" id="plus-btn">+</button>
-          <div class="column-container-hidden" id="column-container">
-            <div class="first">
-              <div class="first-content"></div>
-              <div class="first-content"></div>
-              <div class="first-content"></div>
-            </div>
-            <div class="first">
-              <div class="first-content"></div>
-              <div class="first-content"></div>
-            </div>
-            <div class="first">
-              <div class="first-content"></div>
-            </div>
-            <div class="first">
-              <div class="first-content"></div>
-              <div class="first-content"></div>
-              <div class="first-content"></div>
+            <button class="plus-btn" id="plus-btn">+</button>
+            <div class="column-container-hidden" id="column-container">
+              <div class="first">
+                <div class="first-content"></div>
+                <div class="first-content"></div>
+                <div class="first-content"></div>
+              </div>
+              <div class="first">
+                <div class="first-content"></div>
+                <div class="first-content"></div>
+              </div>
+              <div class="first">
+                <div class="first-content"></div>
+              </div>
+              <div class="first">
+                <div class="first-content"></div>
+                <div class="first-content"></div>
+                <div class="first-content"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -79,7 +95,7 @@
           <button class="tab-btn" id="tab-btn1">Eszközök</button>
           <button class="tab-btn" id="tab-btn2">Módosítás</button>
         </div>
-        <div class=".container-hidden" id="widgets-container">
+        <div class="container-hidden" id="widgets-container">
           <div class="widget-list">
             <div class="widget">
               <img src="./icons/desktop-solid.svg" alt="" srcset="" />
@@ -103,94 +119,119 @@
             </div>
           </div>
         </div>
-        <div class=".container-hidden" id="settings-container">
-          <h3>Címsor</h3>
+        <div class="container-hidden" id="settings-container">
+          <div class="tool-task">
+            <span class="tool-title">Címsor</span>
+            <div class="tool-task-btn">
+              <img src="./icons/mobile-screen-button-solid.svg" alt="" />
+              <img src="./icons/desktop-solid.svg" alt="" srcset="" />
+              <img src="./icons/xmark-solid.svg" alt="" srcset="" />
+            </div>
+          </div>
           <div class="setting-line">
-            <label for="inp" class="inp">
-              <input type="text" id="inp" placeholder="&nbsp;" />
-              <span class="label">Szöveg</span>
-              <span class="focus-bg"></span>
-            </label>
+            <div class="main">
+              <span>Tartalom hozzáadása</span>
+              <textarea
+                id="message"
+                class="textarea"
+                placeholder="Szöveg"
+                rows="10"
+                cols="37"
+                required
+              ></textarea>
+            </div>
           </div>
           <div class="setting-line">
             <p>Beállítás sekció 1</p>
-            <select class="select" id="select" placeholder="Betűméret">
-              <option value="Betűméret" disabled hidden selected>
-                Betűstílus
-              </option>
-              <option value="H1">Félkövér</option>
-              <option value="H2">Italic</option>
-              <option value="H2">Aláhúzott</option>
-            </select>
-            <select class="select" id="select" placeholder="Betűméret">
-              <option value="Betűméret" disabled hidden selected>
-                Betűméret
-              </option>
-              <option value="H1">H1</option>
-              <option value="H2">H2</option>
-              <option value="H2">H3</option>
-            </select>
-            <select class="select" id="select" placeholder="Betűméret">
-              <option value="Betűméret" disabled hidden selected>
-                Szöveg alakítás
-              </option>
-              <option value="H1">Félkövér</option>
-              <option value="H2">Italic</option>
-              <option value="H2">Aláhúzott</option>
-            </select>
-            <select class="select" id="select" placeholder="Betűméret">
-              <option value="Betűméret" disabled hidden selected>
-                Betű vastagság
-              </option>
-              <option value="H1">Félkövér</option>
-              <option value="H2">Italic</option>
-              <option value="H2">Aláhúzott</option>
-            </select>
+            <div class="line">
+              <span>Betűstílus</span>
+              <select class="select" id="select" placeholder="Betűméret">
+                <option value="H1">Félkövér</option>
+                <option value="H2">Italic</option>
+                <option value="H2">Aláhúzott</option>
+              </select>
+            </div>
+            <div class="line">
+              <span>Betűméret</span>
+              <select class="select" id="select" placeholder="Betűméret">
+                <option value="H1">H1</option>
+                <option value="H2">H2</option>
+                <option value="H2">H3</option>
+              </select>
+            </div>
+            <div class="line">
+              <span>Szöveg alakítás</span>
+              <select class="select" id="select" placeholder="Betűméret">
+                <option value="H1">Félkövér</option>
+                <option value="H2">Italic</option>
+                <option value="H2">Aláhúzott</option>
+              </select>
+            </div>
+            <div class="line">
+              <span>Betű vastagság</span>
+              <select class="select" id="select" placeholder="Betűméret">
+                <option value="H1">Félkövér</option>
+                <option value="H2">Italic</option>
+                <option value="H2">Aláhúzott</option>
+              </select>
+            </div>
           </div>
           <div class="setting-line">
             <p>Beállítás sekció 2</p>
-            <select class="select" id="select" placeholder="Betűméret">
-              <option value="Betűméret" disabled hidden selected>Példa</option>
-              <option value="H1">Félkövér</option>
-              <option value="H2">Italic</option>
-              <option value="H2">Aláhúzott</option>
-            </select>
-            <select class="select" id="select" placeholder="Betűméret">
-              <option value="Betűméret" disabled hidden selected>Példa</option>
-              <option value="H1">Félkövér</option>
-              <option value="H2">Italic</option>
-              <option value="H2">Aláhúzott</option>
-            </select>
+            <div class="line">
+              <span>Példa</span>
+              <div class="btn-group">
+                <button class="btn-start"><img src="./icons/mobile-screen-button-solid.svg" alt="" /></button>
+                <button><img src="./icons/desktop-solid.svg" alt="" srcset="" /></button>
+                <button><img src="./icons/gears-solid.svg" alt="" srcset="" /></button>
+              </div>
+            </div>
+            <div class="line">
+              <span>Példa</span>
+              <select class="select" id="select" placeholder="Betűméret">
+                <option value="H1">Félkövér</option>
+                <option value="H2">Italic</option>
+                <option value="H2">Aláhúzott</option>
+              </select>
+            </div>
           </div>
           <div class="setting-line">
             <p>Beállítás sekció 3</p>
-            <select class="select" id="select" placeholder="Betűméret">
-              <option value="Betűméret" disabled hidden selected>Példa</option>
-              <option value="H1">Félkövér</option>
-              <option value="H2">Italic</option>
-              <option value="H2">Aláhúzott</option>
-            </select>
-            <select class="select" id="select" placeholder="Betűméret">
-              <option value="Betűméret" disabled hidden selected>Példa</option>
-              <option value="H1">Félkövér</option>
-              <option value="H2">Italic</option>
-              <option value="H2">Aláhúzott</option>
-            </select>
+            <div class="line">
+              <span>Példa</span>
+              <select class="select" id="select" placeholder="Betűméret">
+                <option value="H1">Félkövér</option>
+                <option value="H2">Italic</option>
+                <option value="H2">Aláhúzott</option>
+              </select>
+            </div>
+            <div class="line">
+              <span>Példa</span>
+              <select class="select" id="select" placeholder="Betűméret">
+                <option value="H1">Félkövér</option>
+                <option value="H2">Italic</option>
+                <option value="H2">Aláhúzott</option>
+              </select>
+            </div>
           </div>
           <div class="setting-line">
             <p>Beállítás sekció 4</p>
-            <select class="select" id="select" placeholder="Betűméret">
-              <option value="Betűméret" disabled hidden selected>Példa</option>
-              <option value="H1">Félkövér</option>
-              <option value="H2">Italic</option>
-              <option value="H2">Aláhúzott</option>
-            </select>
-            <select class="select" id="select" placeholder="Betűméret">
-              <option value="Betűméret" disabled hidden selected>Példa</option>
-              <option value="H1">Félkövér</option>
-              <option value="H2">Italic</option>
-              <option value="H2">Aláhúzott</option>
-            </select>
+            <div class="line">
+              <span>Példa</span>
+              <select class="select" id="select" placeholder="Betűméret">
+                <option value="H1">Félkövér</option>
+                <option value="H2">Italic</option>
+                <option value="H2">Aláhúzott</option>
+              </select>
+            </div>
+            <div class="line">
+              <span>Példa</span>
+              <select class="select" id="select" placeholder="Betűméret">
+                <option value="H1">Félkövér</option>
+                <option value="H2">Italic</option>
+                <option value="H2">Aláhúzott</option>
+              </select>
+            </div>
           </div>
         </div>
       </aside>

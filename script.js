@@ -44,8 +44,23 @@ function handlePlusClick(){
 
 }
 
+function handleEmailModal(){
+  const emailBtn = document.querySelector("#email-btn")
+  const modal = document.querySelector('#email-modal')
+  emailBtn.addEventListener('click', ()=>{
+    modal.classList.remove("email-hidden")
+    modal.classList.add('email-modal')
+  })
+  const closeBtn = document.querySelector('#close-modal')
+  closeBtn.addEventListener('click', ()=>{
+    modal.classList.add("email-hidden")
+    modal.classList.remove('email-modal')
+  })
+}
+
 function main() {
   handleTabClick();
-  handlePlusClick()
+  handlePlusClick();
+  handleEmailModal()
 }
 main();
