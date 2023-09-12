@@ -26,41 +26,62 @@ function handleTabClick() {
   });
 }
 
-function handlePlusClick(){
-  const plusBtn = document.querySelector("#plus-btn")
-  const columnContainer = document.querySelector('#column-container')
-  plusBtn.addEventListener('click', ()=>{
-    plusBtn.classList.remove('plusBtn')
-    plusBtn.classList.add('plus-btn-hidden')
-    columnContainer.classList.remove('column-container-hidden')
-    columnContainer.classList.add('column-container')
-  })
-  columnContainer.addEventListener('click', ()=>{
-    plusBtn.classList.add('plusBtn')
-    plusBtn.classList.remove('plus-btn-hidden')
-    columnContainer.classList.add('column-container-hidden')
-    columnContainer.classList.remove('column-container')
-  })
-
+function handlePlusClick() {
+  const plusBtn = document.querySelector("#plus-btn");
+  const columnContainer = document.querySelector("#column-container");
+  plusBtn.addEventListener("click", () => {
+    plusBtn.classList.remove("plusBtn");
+    plusBtn.classList.add("plus-btn-hidden");
+    columnContainer.classList.remove("column-container-hidden");
+    columnContainer.classList.add("column-container");
+  });
+  columnContainer.addEventListener("click", () => {
+    plusBtn.classList.add("plusBtn");
+    plusBtn.classList.remove("plus-btn-hidden");
+    columnContainer.classList.add("column-container-hidden");
+    columnContainer.classList.remove("column-container");
+  });
 }
 
-function handleEmailModal(){
-  const emailBtn = document.querySelector("#email-btn")
-  const modal = document.querySelector('#email-modal')
-  emailBtn.addEventListener('click', ()=>{
-    modal.classList.remove("email-hidden")
-    modal.classList.add('email-modal')
-  })
-  const closeBtn = document.querySelector('#close-modal')
-  closeBtn.addEventListener('click', ()=>{
-    modal.classList.add("email-hidden")
-    modal.classList.remove('email-modal')
+function handleEmailModal() {
+  const emailBtn = document.querySelector("#email-btn");
+  const modal = document.querySelector("#email-modal");
+  emailBtn.addEventListener("click", () => {
+    modal.classList.remove("email-hidden");
+    modal.classList.add("email-modal");
+  });
+  const closeBtn = document.querySelector("#close-modal");
+  closeBtn.addEventListener("click", () => {
+    modal.classList.add("email-hidden");
+    modal.classList.remove("email-modal");
+  });
+}
+function launchToast() {
+  const save = document.querySelector("#save");
+  const toast = document.getElementById("toast");
+  save.addEventListener("click", () => {
+    toast.className = "show";
+    setTimeout(function () {
+      toast.className = toast.className.replace("show", "");
+    }, 3000);
+  });
+}
+
+function pictureHandle(){
+  const navClose = document.querySelector("#nav-close")
+  const pictureModal = document.querySelector("#picture")
+
+  navClose.addEventListener("click", ()=>{
+    pictureModal.classList.toggle("picture-hidden")
+    pictureModal.classList.toggle("picture")
   })
 }
 
 function main() {
   handleTabClick();
   handlePlusClick();
-  handleEmailModal()
+  handleEmailModal();
+  launchToast();
+  pictureHandle()
 }
 main();

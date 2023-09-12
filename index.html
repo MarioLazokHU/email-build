@@ -14,23 +14,80 @@
     />
   </head>
   <body>
+    <div id="toast">
+      <div id="desc">Sikeres mentés...</div>
+    </div>
+    <div class="picture-hidden" id="picture">
+      <div class="pic-btn-con">
+        <button class="pic-btn1">Opció 1</button>
+        <button class="pic-btn2">Opció 2</button>
+      </div>
+      <div class="pic-container">
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+        <div class="pic">KÉP</div>
+      </div>
+    </div>
     <div class="email-hidden" id="email-modal">
       <div class="modal">
         <div class="email">
           <span>Email elküldése</span>
           <button class="nav-close" id="close-modal">X</button>
         </div>
-        <input type="text" placeholder="E-mail..." />
-        <button class="nav-btn">Elküldés</button>
+        <div class="send">
+          <div class="form__group field">
+            <input
+              type="input"
+              class="form__field"
+              placeholder="Name"
+              name="name"
+              id="name"
+              required
+            />
+            <label for="name" class="form__label">E-mail</label>
+          </div>
+          <button class="nav-btn">Elküldés</button>
+        </div>
       </div>
     </div>
     <header>
       <nav>
-        <button class="nav-btn">Mentés</button>
-        <button class="nav-btn">Betöltés</button>
-        <button class="nav-btn">Elküldés</button>
+        <button class="nav-btn" id="save">Mentés</button>
         <button class="nav-btn" id="email-btn">Elküldés Emailben</button>
-        <button class="nav-close">X</button>
+        <button class="nav-close" id="nav-close">X</button>
       </nav>
     </header>
     <main>
@@ -65,6 +122,7 @@
                   alt=""
                   srcset=""
                 />
+                <img src="./icons/tablet-solid.svg" alt="" srcset="" />
               </div>
             </div>
             <button class="plus-btn" id="plus-btn">+</button>
@@ -152,6 +210,15 @@
               </select>
             </div>
             <div class="line">
+              <span>Pédák bekapcsolása</span>
+              <div>
+                <label class="toggle">
+                  <input class="toggle-checkbox" type="checkbox" checked />
+                  <div class="toggle-switch"></div>
+                </label>
+              </div>
+            </div>
+            <div class="line">
               <span>Betűméret</span>
               <select class="select" id="select" placeholder="Betűméret">
                 <option value="H1">H1</option>
@@ -181,9 +248,18 @@
             <div class="line">
               <span>Példa</span>
               <div class="btn-group">
-                <button class="btn-start"><img src="./icons/mobile-screen-button-solid.svg" alt="" /></button>
-                <button><img src="./icons/desktop-solid.svg" alt="" srcset="" /></button>
-                <button><img src="./icons/gears-solid.svg" alt="" srcset="" /></button>
+                <button class="btn-start">
+                  <img src="./icons/align-left-solid.svg" alt="" srcset="" />
+                </button>
+                <button>
+                  <img src="./icons/align-right-solid.svg" alt="" />
+                </button>
+                <button>
+                  <img src="./icons/align-center-solid.svg" alt="" srcset="" />
+                </button>
+                <button>
+                  <img src="./icons/align-justify-solid.svg" alt="" srcset="" />
+                </button>
               </div>
             </div>
             <div class="line">
