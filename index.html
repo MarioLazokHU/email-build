@@ -18,7 +18,10 @@
       <div id="desc">Sikeres mentés...</div>
     </div>
     <div class="picture-hidden" id="picture">
-      <div class="pic-title-line"><h3>Képtár</h3><button class="nav-close">X</button></div>
+      <div class="pic-title-line">
+        <h3>Képtár</h3>
+        <button class="nav-close">X</button>
+      </div>
       <div class="pic-btn-con">
         <button class="pic-btn1">Médiatár</button>
         <button class="pic-btn2">File-ok feltöltése</button>
@@ -62,9 +65,21 @@
         <div class="pic">KÉP</div>
       </div>
       <div class="drop-pic-container">
-        <div></div>
         <div class="file-dropzone">
-          <p>Kattints az alábbi gombra a file feltöltéshez</p>
+          <p>
+            Kattints az alábbi gombra a file feltöltéshez vagy húd ide a
+            file-okat
+          </p>
+          <button class="file-btn">Fájlok kiválasztása</button>
+        </div>
+      </div>
+      <div class="drop-pic-container-hover">
+        <span class="drop-text">Ejtse ide a fileokat a feltöltéshez</span>
+        <div class="file-dropzone">
+          <p>
+            Kattints az alábbi gombra a file feltöltéshez vagy húd ide a
+            file-okat
+          </p>
           <button class="file-btn">Fájlok kiválasztása</button>
         </div>
       </div>
@@ -229,7 +244,6 @@
                     <li value="b">
                       <img src="./icons/desktop-solid.svg" alt="" />
                     </li>
-                   
                   </ul>
                 </div>
               </div>
@@ -259,7 +273,6 @@
                     <li value="b">
                       <img src="./icons/desktop-solid.svg" alt="" />
                     </li>
-                    
                   </ul>
                 </div>
               </div>
@@ -290,7 +303,6 @@
                     <li value="b">
                       <img src="./icons/desktop-solid.svg" alt="" />
                     </li>
-                 
                   </ul>
                 </div>
               </div>
@@ -320,7 +332,6 @@
                     <li value="b">
                       <img src="./icons/desktop-solid.svg" alt="" />
                     </li>
-                 
                   </ul>
                 </div>
               </div>
@@ -350,7 +361,6 @@
                     <li value="b">
                       <img src="./icons/desktop-solid.svg" alt="" />
                     </li>
-                   
                   </ul>
                 </div>
               </div>
@@ -383,7 +393,6 @@
                     <li value="b">
                       <img src="./icons/desktop-solid.svg" alt="" />
                     </li>
-                  
                   </ul>
                 </div>
               </div>
@@ -422,7 +431,6 @@
                     <li value="b">
                       <img src="./icons/desktop-solid.svg" alt="" />
                     </li>
-                   
                   </ul>
                 </div>
               </div>
@@ -553,6 +561,17 @@
                 <option value="H2">Italic</option>
                 <option value="H2">Aláhúzott</option>
               </select>
+            </div>
+            <div class="line">
+              <div class="line-title">
+                <div class="drop-select-con">
+                <div class="dropdown-select">Válasson betűtípiust<img src="./icons/caret-down-solid.svg" alt="" srcset=""></div>
+                <div class="dropdown-select"><input class="dropdown-select" type="text" value="Írjd be a keresendő betűtípust"></div>
+                <div class="dropdown-selected">Betűtípus 1</div>
+                <div class="dropdown-selected">Betűtípus 2</div>
+                <div class="dropdown-selected">Betűtípus 3</div>
+              </div>
+              </div>
             </div>
           </div>
         </div>

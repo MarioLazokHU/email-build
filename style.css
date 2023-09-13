@@ -202,7 +202,7 @@ label {
   border-radius: 3px;
   margin: 10px;
   padding: 3px;
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .widget {
@@ -796,6 +796,7 @@ white-space: nowrap;
     padding: 20px;
     background-color: #1c1b20;
     border-radius: 5px;
+    z-index: 1;
   }
 
   .file-dropzone:hover{
@@ -892,10 +893,39 @@ white-space: nowrap;
   border: 1px solid #6e64d9;
   
 }
-.drop-pic-container:hover{
-  background-color: #47418b59;
+
+.drop-pic-container-hover{
+  height: 450px;
+  padding: 30px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  overflow-y: scroll;
+  background-color: #47418b;
   z-index: 10;
-  border: inherit 2px dotted #ebebeb;
+  border: 2px dotted #ebebeb;
+  position: relative;
+}
+.drop-pic-container-hover>div{
+  opacity: 0.2;
+  z-index: -20;
+}
+
+.drop-text{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 50px;
+  color: white;
+  text-shadow: #141414 1px 1px 2px;
 }
 
 .pic{
@@ -952,3 +982,53 @@ white-space: nowrap;
 }
 
 
+.dropdown-select{
+  width: 300px;
+  height: 30px;
+  background-color: #1c1b20;
+  border: #47418b 2px solid;
+  border-radius: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  color: white;
+  position: relative;
+}
+
+.dropdown-select>img{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dropdown-select>input{
+  padding-left: 15px;
+}
+
+.dropdown-selected{
+  width: 300px;
+  height: 30px;
+  background-color: #1c1b20;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-selected:hover{
+  background-color: #47418b;
+}
+
+.drop-select-con{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: fit-content;
+  height: fit-content;
+}
