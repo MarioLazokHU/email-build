@@ -772,30 +772,76 @@ white-space: nowrap;
 .picture{
   width: 90%;
   height: 90%;
-  background: linear-gradient(to right, #141414 75%, #302444 100%);
+  background: linear-gradient(to left, #141414 75%, #302444 100%);
   position: absolute;
+  border: 1px solid #47418b;
   z-index: 10;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   box-shadow: #141414 0px 0px 30px;
   border-radius: 3px;
-  border: #141414 2px solid;
+  overflow-y: scroll;
 }
+
+  .file-dropzone{
+    color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 120px;
+    margin: 40px;
+    padding: 20px;
+    background-color: #1c1b20;
+    border-radius: 5px;
+  }
+
+  .file-dropzone:hover{
+    background-color: #47418b;
+  }
+
+  .file-btn{
+    width: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+    border: #6e64d9 2px solid;
+    background-color: #6e64d9;
+    color: #ebebeb;
+    text-align: center;
+  }
+
+  .pic-title-line{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ebebeb;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .pic-title-line>button{
+    border-radius: 5px;
+    margin-left: 10px;
+    height: 42px;
+    bottom: 0px;
+    right: 25px;
+  }
 
 .pic-btn-con{
   width: 100%;
-  height: 100px;
   display: flex;
   justify-content: left;
   align-items: end;
   gap: 10px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .pic-btn1{
   border: none;
-  background-color: #ededed12;
+  background-color:  #6e64d9;
   color: #6e64d9;
   padding: 20px;
   color: #ebebeb;
@@ -815,6 +861,7 @@ white-space: nowrap;
 }
 
 .pic-container{
+  max-height: 450px;
   padding: 30px;
   margin-bottom: 10px;
   margin-left: 10px;
@@ -827,6 +874,28 @@ white-space: nowrap;
   overflow-y: scroll;
   background-color: #ededed12;
   border: 1px solid #6e64d9;
+}
+
+.drop-pic-container{
+ height: 450px;
+  padding: 30px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  overflow-y: scroll;
+  background-color: #ededed12;
+  border: 1px solid #6e64d9;
+  
+}
+.drop-pic-container:hover{
+  background-color: #47418b59;
+  z-index: 10;
+  border: inherit 2px dotted #ebebeb;
 }
 
 .pic{
