@@ -873,6 +873,7 @@ white-space: nowrap;
   flex-wrap: wrap;
   gap: 30px;
   overflow-y: scroll;
+  overflow-x: hidden;
   background-color: #ededed12;
   border: 1px solid #6e64d9;
 }
@@ -889,6 +890,7 @@ white-space: nowrap;
   flex-wrap: wrap;
   gap: 30px;
   overflow-y: scroll;
+  overflow-x: hidden;
   background-color: #ededed12;
   border: 1px solid #6e64d9;
   
